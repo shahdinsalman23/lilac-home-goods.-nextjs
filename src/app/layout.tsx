@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,187 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossOrigin="anonymous"></link>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
+      <body className={inter.className}>
+      <div className="header-top">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-12">
+                    <div className="head-top-txt">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header className="header-main">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-3">
+                    <div className="header-logo">
+                        <h3>Lilac Home Goods</h3>
+                    </div>
+                </div>
+                <div className="col-lg-6">
+                    <div className="header-nav">
+                        <ul>
+                            <li><Link href={`./`}>Home</Link></li>
+                            <li className="main-menu"><Link href={`shop`}>Shop <i className='bx bxs-down-arrow'></i></Link>
+                                <ul className="dropdown">
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                </ul>
+                            </li>
+                            <li className="main-menu"><Link href={`product`}>Products <i className='bx bxs-down-arrow'></i></Link>
+                                <ul className="dropdown">
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                </ul>
+                            </li>
+                            <li className="main-menu"><Link href={`#`}>Categories <i className='bx bxs-down-arrow'></i></Link>
+                                <ul className="dropdown">
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                    <li><Link href="#">Lorem Ipsum</Link></li>
+                                </ul>
+                            </li>
+                            <li><Link href={`blog`}>Blog</Link></li>
+                            <li><Link href={`contact`}>Contact</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-lg-3">
+                    <div className="header-end">
+                        <Link href="contact.php" className="themebtn">Order Now</Link>
+                        <div className="header-user-icon">
+                            <Link href="#"><i className='bx bx-shopping-bag'></i></Link>
+                            <Link href="#"><i className='bx bx-user'></i></Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+        {children}
+
+
+        <footer className="footer-main">
+        <div className="as-seen">
+            <h4>As Seen On</h4>
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-8">
+                        <div className="row">
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-1.png" alt="" />
+                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-2.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-3.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-4.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-5.png" alt=""/>
+                                </div>
+                            </div>
+                            <div className="col-lg-2">
+                                <div className="company-logo">
+                                    <img src="images/comp-logo-6.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-5">
+                    <div className="footer-logo">
+                        <h3>Lilac Home Goods</h3>
+                        <p>Info@gmail.com</p>
+                        <p>123-456-789</p>
+                        <p>Loremipsumdolor.sit</p>
+                        <ul>
+                            <li><Link href="#"><i className='bx bxl-facebook-square'></i></Link></li>
+                            <li><Link href="#"><i className='bx bxl-instagram-alt'></i></Link></li>
+                            <li><Link href="#"><i className='bx bxl-twitter'></i></Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-lg-3">
+                    <div className="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><Link href="#">HOME</Link></li>
+                            <li><Link href="#">SHOP</Link></li>
+                            <li><Link href="#">PRODUCTS</Link></li>
+                            <li><Link href="#">CATEGORIES</Link></li>
+                            <li><Link href={'blogs'}>BLOG</Link></li>
+                            <li><Link href="#">CONTACT</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="col-lg-4">
+                    <div className="footer-end">
+                        <h4>Let's be Friends</h4>
+                        <p>Sign up to our newsletter to save 15% OFF your order!</p>
+                        <div className="input-field">
+                            <input type="email" name="" id="" placeholder="Enter email address" />
+                            <Link href="#" className="themebtn">Submit</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="copyright-sec">
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-12">
+                        <div className="copy-right">
+                            <div className="copy-right-txt">
+                                <p>Copyright © 2023 Lilac Home Goods - All Right Reserved.</p>
+                            </div>
+                            <div className="payment-icon">
+                                <ul>
+                                    <li><img src="images/pay-icon-1.png" alt="" /></li>
+                                    <li><img src="images/pay-icon-2.png" alt=""/></li>
+                                    <li><img src="images/pay-icon-3.png" alt=""/></li>
+                                    <li><img src="images/pay-icon-4.png" alt=""/></li>
+                                    <li><img src="images/pay-icon-5.png" alt=""/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+        </body>
     </html>
   );
 }
